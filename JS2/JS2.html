@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jokenpô Game</title>
+</head>
+<body>
+<script>
+  let playerScore = 0;
+
+  function getRandomChoice() {
+    const choices = ['Papel', 'Pedra', 'Tesoura'];
+    const randomIndex = Math.floor(Math.random() * choices.length);
+    return choices[randomIndex];
+  }
+
+  function playRound(playerChoice) {
+    const computerChoice = getRandomChoice();
+    console.log(`Você escolheu: ${playerChoice}`);
+    console.log(`Computador escolheu: ${computerChoice}`);
+
+    if (
+      (playerChoice === 'Papel' && computerChoice === 'Pedra') ||
+      (playerChoice === 'Pedra' && computerChoice === 'Tesoura') ||
+      (playerChoice === 'Tesoura' && computerChoice === 'Papel')
+    ) {
+      console.log('Você ganhou esta rodada!');
+      playerScore++;
+    } else if (
+      (playerChoice === 'Pedra' && computerChoice === 'Papel') ||
+      (playerChoice === 'Tesoura' && computerChoice === 'Pedra') ||
+      (playerChoice === 'Papel' && computerChoice === 'Tesoura')
+    ) {
+      console.log('Você perdeu! Fim de jogo.');
+      console.log(`Pontuação final: ${playerScore}`);
+      return;
+    } else {
+      console.log('Empate! A rodada continua.');
+    }
+
+    playGame();
+  }
+
+  function playGame() {
+    const userInput = parseInt(prompt('Escolha sua jogada: 1 - Papel, 2 - Pedra, 3 - Tesoura'));
+
+    if (userInput === 1) {
+      playRound('Papel');
+    } else if (userInput === 2) {
+      playRound('Pedra');
+    } else if (userInput === 3) {
+      playRound('Tesoura');
+    } else {
+      console.log('Jogada inválida. Fim de jogo.');
+      console.log(`Pontuação final: ${playerScore}`);
+    }
+  }
+
+  playGame();
+</script>
+</body>
+</html>
