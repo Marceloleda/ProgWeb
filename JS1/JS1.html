@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    width: 850px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #f0f0f0;
+  }
+  table {
+    margin-top: 20px;
+  }
+  th, td {
+    padding: 8px;
+    text-align: center;
+  }
+  th {
+    background-color: #f2f2f2;
+  }
+</style>
+<title>Instituto de computacao</title>
+</head>
+<body>
+<script>
+  for (let i = 1; i <= 10; i++) {
+    const table = document.createElement('table');
+    table.border = "2";
+    const headingRow = document.createElement('tr');
+    const heading = document.createElement('th');
+    heading.colSpan = 10;
+    heading.textContent = `Produtos de ${i}`;
+    headingRow.appendChild(heading);
+    table.appendChild(headingRow);
+
+    for (let j = 1; j <= 10; j++) {
+      const row = document.createElement('tr');
+      const multiplicandCell = document.createElement('td');
+      multiplicandCell.textContent = (`${i}x${j}`);
+      row.appendChild(multiplicandCell);
+
+      const resultCell = document.createElement('td');
+      resultCell.textContent = i * j;
+      row.appendChild(resultCell);
+
+      table.appendChild(row);
+    }
+
+    document.body.appendChild(table);
+  }
+</script>
+</body>
+</html>
