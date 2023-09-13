@@ -17,7 +17,8 @@
     background-color: red;
     width: 200px;
     height: 200px;
-    border: 5px black solid;
+    border: 5px green solid;
+    font-size: 32px;
 
 }
 .bloco2{
@@ -27,5 +28,6 @@
     background-color: blue;
     width: 200px;
     height: 200px;
-    border: 5px black solid;
+    border: 5px yellow solid;
+    font-size: 32px;
 }
