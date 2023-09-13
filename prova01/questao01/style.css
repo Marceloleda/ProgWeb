@@ -1,0 +1,31 @@
+
+.boder{
+    border: 5px black solid;
+}
+.conteiner{
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+    padding: 20px;
+    border: 5px black solid;
+}
+
+.bloco1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    width: 200px;
+    height: 200px;
+    border: 5px black solid;
+
+}
+.bloco2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
+    width: 200px;
+    height: 200px;
+    border: 5px black solid;
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IntegerSet App</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+  }
+  h1 {
+    margin-bottom: 10px;
+  }
+  button {
+    padding: 5px 10px;
+    margin: 5px;
+  }
+</style>
+</head>
+<body>
+<h1>IntegerSet App</h1>
+<div>
+  <label for="element">Insira um elemento:</label>
+  <input type="number" id="element">
+  <button onclick="insertElement()">Inserir</button>
+  <button onclick="removeElement()">Remover</button>
+</div>
+<div>
+  <button onclick="displaySet('set1')">Mostrar Conjunto 1</button>
+  <button onclick="displaySet('set2')">Mostrar Conjunto 2</button>
+</div>
+<div>
+  <button onclick="performOperation('union')">União</button>
+  <button onclick="performOperation('intersection')">Interseção</button>
+  <button onclick="performOperation('difference')">Diferença</button>
+</div>
+<div id="output"></div>
+
+<script>
+  class IntegerSet {
+    constructor(maxValue) {
+      this.maxValue = maxValue;
+      this.set = new Array(maxValue + 1).fill(false);
+    }
+
+    // ... Métodos da classe IntegerSet ...
+
+    insert(element) {
+      if (element >= 0 && element <= this.maxValue) {
+        this.set[element] = true;
+      }
+    }
+
+    remove(element) {
+      if (element >= 0 && element <= this.maxValue) {
+        this.set[element] = false;
+      }
+    }
+
+    // ... Outros métodos da classe IntegerSet ...
+
+    toString() {
+      const elements = [];
+
+      for (let i = 0; i <= this.maxValue; i++) {
+        if (this.set[i]) {
+          elements.push(i);
+        }
+      }
+
+      return elements.join(', ');
+    }
+  }
+
+  const set1 = new IntegerSet(10);
+  const set2 = new IntegerSet(10);
+
+  function insertElement() {
+    const element = parseInt(document.getElementById('element').value);
+    set1.insert(element);
+    updateOutput(`Elemento ${element} inserido no Conjunto 1.`);
+  }
+
+  function removeElement() {
+    const element = parseInt(document.getElementById('element').value);
+    set1.remove(element);
+    updateOutput(`Elemento ${element} removido do Conjunto 1.`);
+  }
+
+  function displaySet(setName) {
+    const selectedSet = setName === 'set1' ? set1 : set2;
+    updateOutput(`Conjunto ${setName}: {${selectedSet.toString()}}`);
+  }
+
+  function performOperation(operation) {
+    let result;
+    if (operation === 'union') {
+      result = set1.union(set2);
+    } else if (operation === 'intersection') {
+      result = set1.intersection(set2);
+    } else if (operation === 'difference') {
+      result = set1.difference(set2);
+    }
+    updateOutput(`Resultado da operação ${operation}: {${result.toString()}}`);
+  }
+
+  function updateOutput(message) {
+    const outputDiv = document.getElementById('output');
+    const p = document.createElement('p');
+    p.textContent = message;
+    outputDiv.appendChild(p);
+  }
+</script>
+</body>
+</html>
