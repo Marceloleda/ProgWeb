@@ -42,3 +42,27 @@
   font-size: 18px; 
   color: black; 
 }
+
+.cacto {
+  position: absolute;
+
+  background-image: url(../img/sprite.png); 
+  width: 40px; 
+  height: 60px; 
+  bottom: 5px;
+
+  z-index: 6;
+  background-position: -125px -2px;
+
+
+}
+
+.pterossauro {
+  position: absolute;
+
+  background-image: url(../img/sprite.png); 
+
+  width: 70px; 
+  height: 60px; 
+  z-index: 4;
+}
