@@ -4,12 +4,11 @@
     <input type="hidden" name="id" value="">
 
     <div class="form-group">
-    <label for="sigla">Sigla do curso</label>
-    <input type="text" class="form-control" id="sigla" name="sigla" placeholder="Informe a sigla do curso">
-    <small class="form-text text-muted">Em caso de dúvidas, consulte o site da UFAM.</small>
-    <div class="invalid">{{printError errors "sigla"}}</div>
-
-</div>
+        <label for="sigla">Sigla do curso</label>
+        <input type="text" class="form-control" id="sigla" name="sigla" placeholder="Informe a sigla do curso">
+        <small class="form-text text-muted">Em caso de dúvidas, consulte o site da UFAM.</small>
+        <div class="invalid">{{printError errors "sigla"}}</div>
+    </div>
 
     <div class="form-group">
         <label for="nome">Nome do curso</label>
@@ -26,15 +25,15 @@
         <legend>Área da Ciência</legend>
         <div class="form-check">
             <label class="form-check-label">
-                <input type="radio" class="form-check-input" name="areaId" id="areaId" value="1" checked="">
+                <input type="radio" class="form-check-input" name="areaId" id="areaId1" value="1" checked="">
                 Ciências Exatas. Ex: Computação, Matemática, Estatística, etc.
             </label><br/>
             <label class="form-check-label">
-                <input type="radio" class="form-check-input" name="areaId" id="areaId" value="2" checked="">
+                <input type="radio" class="form-check-input" name="areaId" id="areaId2" value="2">
                 Ciências Humanas. Ex: Letras, História, Psicologia, etc.
             </label><br/>
             <label class="form-check-label">
-                <input type="radio" class="form-check-input" name="areaId" id="areaId" value="3" checked="">
+                <input type="radio" class="form-check-input" name="areaId" id="areaId3" value="3">
                 Ciências Biológicas. Ex: Medicina, Odontologia, Farmácia, etc.
             </label>
         </div>
@@ -42,4 +41,3 @@
 
     <button type="submit" class="btn btn-primary">Adicionar Curso</button>
 </form>
-

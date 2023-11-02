@@ -8,7 +8,7 @@ const router = express.Router();
 router.get("/", mainController.index);
 router.get("/sobre", mainController.sobre);
 router.get("/game",mainController.game);
-router.get("/ui",mainController.ui);
+router.get("/interface",mainController.interface);
 
 router.get("/area", areaController.index);
 

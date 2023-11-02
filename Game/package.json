@@ -1,27 +1,28 @@
 {
   "name": "pw",
   "version": "1.0.0",
-  "description": "",
+  "description": "Projeto de desenvolvimento web",
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Nenhum\" && exit 1"
   },
   "keywords": [],
   "author": "Marcelo Leda",
   "license": "ISC",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.1",
-    "bootstrap": "^4.5.3",
+    "bootstrap": "^4.6.2",
     "express": "^4.18.2",
     "express-handlebars": "^5.2.0",
     "jquery": "^3.5.1",
+    "latest": "^0.2.0",
     "morgan": "^1.10.0",
-    "mysql2": "^2.2.5",
+    "mysql2": "^2.3.3",
     "node-sass-middleware": "^1.1.0",
-    "nodemon": "^2.0.6",
+    "nodemon": "^3.0.1",
     "popper.js": "^1.16.1",
-    "sequelize": "^6.3.5",
-    "sequelize-cli": "^6.2.0"
+    "sequelize": "^6.33.0",
+    "sequelize-cli": "^6.6.1"
   }
 }

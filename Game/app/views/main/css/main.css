@@ -1,0 +1,69 @@
+.deserto {
+    border: 1px solid black;
+    position: relative;
+    overflow: hidden;
+    background: #c0c0c0;
+    z-index: 1;
+  }
+  
+  .chao {
+    background-image: url(../img/sprite.png);
+    position: absolute;
+    bottom: 0px;
+    background-position-y: -78px;
+    width: 1831px;
+    height: 20px;
+    z-index: 2;
+  }
+  
+  .dino {
+    background-image: url(../img/sprite.png);
+    position: absolute;
+    width: 66px;
+    left: 20px;
+    height: 70px;
+    z-index: 3;
+  }
+  
+  .nuvem {
+    background-image: url(../img/sprite.png);
+    background-position: -125px -2px;
+    position: absolute;
+    width: 70px;
+    height: 20px;
+    z-index: 2;
+  }
+  
+  .score {
+    position: absolute;
+    z-index: 6;
+    left: 970px;
+    top: 25px; 
+    font-size: 18px; 
+    color: black; 
+  }
+  
+  .cacto {
+    position: absolute;
+  
+    background-image: url(../img/sprite.png); 
+    width: 40px; 
+    height: 60px; 
+    bottom: 5px;
+  
+    z-index: 6;
+    background-position: -125px -2px;
+  
+  
+  }
+  
+  .pterossauro {
+    position: absolute;
+  
+    background-image: url(../img/sprite.png); 
+  
+    width: 70px; 
+    height: 60px; 
+    z-index: 4;
+  }
+  
